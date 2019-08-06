@@ -1,3 +1,5 @@
+DISCLAIMER: This is a fork from the original project https://github.com/jlucansky/Camunda.Api.Client! I made changes to be able to build it on my MAC and also added some new features.
+
 # Camunda REST API Client [![Build status](https://ci.appveyor.com/api/projects/status/l2ct8th9hwuwlqvf?svg=true)](https://ci.appveyor.com/project/jlucansky/camunda-api-client) [![NuGet](https://img.shields.io/nuget/v/Camunda.Api.Client.svg)](https://www.nuget.org/packages/Camunda.Api.Client)
 Camunda REST API Client for .NET platform
 - [x] .NET Framework 4.6.1

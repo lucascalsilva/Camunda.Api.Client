@@ -20,5 +20,35 @@ namespace Camunda.Api.Client.ExternalTask
         /// Fetches and locks a specific number of external tasks for execution by a worker. Query can be restricted to specific task topics and for each task topic an individual lock time can be provided.
         /// </summary>
         public Task<List<LockedExternalTask>> FetchAndLock(FetchExternalTasks fetching) => _api.FetchAndLock(fetching);
+
+        /// <summary>
+        /// Set a number of retries for the external task.
+        /// </summary>
+        public Task SetRetries(string externalTaskId, RetriesInfo retriesInfo) => _api.SetRetries(externalTaskId, retriesInfo);
+
+        /// <summary>
+        /// Set a number of retries for the external task.
+        /// </summary>
+        public Task SetPriority(string externalTaskId, PriorityInfo priorityInfo) => _api.SetPriority(externalTaskId, priorityInfo);
+        
+        /// <summary>
+        /// Completes a specific external task.
+        /// </summary>
+        public Task Complete(string externalTaskId, CompleteExternalTask completeExternalTask) => _api.Complete(externalTaskId, completeExternalTask);
+
+        /// <summary>
+        /// Sends a failure to a specific external task.
+        /// </summary>
+        public Task HandleFailure(string externalTaskId, ExternalTaskFailure externalTaskFailure) => _api.HandleFailure(externalTaskId, externalTaskFailure);
+
+        /// <summary>
+        /// Sends a failure to a specific external task.
+        /// </summary>
+        public Task HandleBpmnError(string externalTaskId, ExternalTaskBpmnError externalTaskBpmnError) => _api.HandleBpmnError(externalTaskId, externalTaskBpmnError);
+
+        /// <summary>
+        /// Unlocks a specific external task.
+        /// </summary>
+        public Task Unlock(string externalTaskId) => _api.Unlock(externalTaskId);
     }
 }
