@@ -6,6 +6,9 @@ namespace Camunda.Api.Client.ExternalTask
 {
     public class ExternalTaskService
     {
+
+        public ExternalTaskService(){}        
+
         private IExternalTaskRestService _api;
 
         internal ExternalTaskService(IExternalTaskRestService api) { _api = api; }
